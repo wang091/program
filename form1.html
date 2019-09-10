@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>form</title>
+	<style>
+		h1{
+			margin-left: 30px;
+		}
+		span{
+			height: 30px;
+			width: 80px;
+			background: skyblue;
+			display: inline-block;
+			text-align: center;
+			line-height: 30px;
+			margin-bottom: 4px;
+		}
+		.name2{
+			background: orange;
+			height: 30px;
+			width: 260px;
+			text-align: left;
+			padding-left: 6px;
+		}
+		.submit{
+			background: #cbebfb;
+			height: 30px;
+			width: 350px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+	<h1>Information Form</h1>
+	<form name="name" >
+		<span>name</span>
+		<span class="name2"><input type="text" name="name" ></span>
+	</form>
+	<form name="pwd">
+		<span>pwd</span>
+		<span class="name2"><input type="password" name="pwd"></span>
+	</form>	
+	<form name="sex">
+		<span>sex</span>
+		<span class="name2"><input type="radio" name="sex" value="male">male
+		<input type="radio" name="sex" value="female">female</span>
+	</form>
+	<span>age</span>	
+	<span class="name2">
+	<select name="age">
+		<option>10</option>
+		<option>15</option>
+		<option>20</option>
+		<option>25</option>
+		<option>30</option>
+
+	</select>
+	</span>
+	<form name="course">
+		<span>course</span>
+		<span class="name2">
+		<input type="checkbox" name="course" value="Chinese">Chinese	
+		<input type="checkbox" name="course" value="Math">Math
+		<input type="checkbox" name="course" value="English">English
+	</span>
+	</form>
+	<span class="submit">
+	<input type="submit" name="tijiao" value="Submit it">
+	<input type="reset" name="reset" value="Reset it"></span></div>
+</body>
+</html>
