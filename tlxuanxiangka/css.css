@@ -1,0 +1,45 @@
+/*标题区域60*470 图片590*470 */
+.tlboxs{
+	width:830px ;
+	height: 470px;
+	position: relative;
+	overflow: hidden;
+	border: 5px solid orange;
+}
+.tlboxs .tlbox {
+	width: 650px;
+	height: 470px;
+	display: flex;
+	position: absolute;
+	top: 0;
+}
+.tlboxs .tl1{
+	left: 0;
+}
+.tlboxs .tl2{
+	left: 650px;
+}
+.tlboxs .tl3{
+	left: 710px;
+}
+.tlboxs .tl4{
+	left: 770px;
+}
+.tlboxs .tlbox .title{
+	color: white;
+	font-size: 22px;
+	line-height: 36px;
+	padding: 130px 19px 0;
+}
+.tlboxs .tl1 .title{
+	background: rgb(0, 0, 127);
+}
+.tlboxs .tl2 .title{
+background: rgb(238, 136, 0);
+}
+.tlboxs .tl3 .title{
+background: rgb(126, 127, 0);
+}
+.tlboxs .tl4 .title{
+background: rgb(35, 97,173);
+}
