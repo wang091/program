@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>行业系统</title>
+</head>
+ <style>
+ /* 590 470 */
+.tlboxs{
+	width: 470px;
+	height: 830px;
+	position: relative;
+	overflow: hidden;
+	border:5px solid orange;
+}
+.tlboxs .tlbox{
+	width: 470px;
+	height: 650px;
+	position: absolute;
+	top:0;
+	transition: 2s linear;
+}
+.tlboxs .tlbox .title{
+	font-size: 22px;
+	color:white;
+	text-align:center;
+	height:65px;
+	line-height: 62px;
+}
+.tlboxs .tl1 .title{
+	background:#00007F;
+}
+.tlboxs .tl2 .title{
+	background:#EE8800;
+}
+.tlboxs .tl3 .title{
+	background:#7F7F00;
+}
+.tlboxs .tl4 .title{
+	background:#2361AD;
+}
+.tlboxs .tl1{top:0;}
+.tlboxs .tl2{top:650px;}
+.tlboxs .tl3{top:710px;}
+.tlboxs .tl4{top:770px;}
+</style>
+<body>
+	<div id="tl1" class="tlboxs">
+		 <div class="tlbox tl1">
+		 	<div class="title">交通行业</div>
+		 	<div class="content">
+		 		<img src="images/01.jpg" alt="1"></div>
+		 </div>
+		 <div class="tlbox tl2">
+		 	<div class="title">司法行业</div>
+		 	<div class="content">
+		 		<img src="images/02.jpg" alt="2"></div>
+		 </div>
+		 <div class="tlbox tl3">
+		 	<div class="title">政府行业</div>
+		 	<div class="content">
+		 		<img src="images/03.jpg" alt="3"></div>
+		 </div>
+		 <div class="tlbox tl4">
+		 	<div class="title">其它行业</div>
+		 	<div class="content">
+		 		<img src="images/04.jpg" alt="4"></div>
+		 </div>
+		</div>
+
+		<script>
+			var tlboxs=document.getElementById('tl1');
+			var tlbox=tlboxs.getElementsByClassName('tlbox');
+			var title=tlboxs.getElementsByClassName('title');
+			var contentwidth=590;
+			var titleWidth=60;
+			var n=0;
+			for(var i=0;i<title.length;i++){
+				title[i].index=i;
+				title[i].onclick=function(){
+					n=this.index;
+					for(var i=0;i<tlbox.length;i++){
+						if(i<=n){
+						tlbox[i].style.top=i*titleWidth+'px';
+					}else{
+						tlbox[i].style.top=i*titleWidth+contentwidth+'px';
+					}
+			  }
+			}
+		}
+		</script>
+</body>
+</html>
